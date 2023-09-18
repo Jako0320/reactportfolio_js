@@ -1,4 +1,4 @@
-import profilePic from "../assets/profilePic.jpg";
+import profilePic from "../assets/ProfilePic.jpeg";
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -6,7 +6,7 @@ function About() {
   return (
     <section>
       <div>
-        <image src={profilePic} className="profilePic" alt="Profile Pic" />
+        <img src={profilePic} className="profilePic" alt="Profile Pic" />
       </div>
       <div>
         <h1>About Me</h1>
