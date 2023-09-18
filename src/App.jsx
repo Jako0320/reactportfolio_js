@@ -10,14 +10,18 @@ import Resume from "./pages/Resume";
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/portfolio" element={<Portfolio/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/resume" element={<Resume/>} />
-        <Route path="/" element={<About/>} />
-      </Routes>
-      <Footer />
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
+        <section className="flex-grow-1">
+        <Routes style={{ flex: 1 }}>
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/" element={<About />} />
+        </Routes>
+        </section>
+        <Footer />
+      </div>
     </Router>
   );
 }

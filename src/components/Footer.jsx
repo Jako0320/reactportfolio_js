@@ -1,15 +1,38 @@
-export default function Footer() {
+import React from "react";
+
+function Footer() {
   return (
-    <footer>
-      <a href="https://www.linkedin.com/in/jacques-scoffoni/" className="Link">
-        LinkedIn
-      </a>
-      <a href="https://github.com/jako0320" className="link">
-        GitHub
-      </a>
-      <a href="mailto:jacques.scoffoni@gmail.com" className="link">
-        Email me
-      </a>
+    <footer className="bg-dark text-white py-3">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-2">
+            <a
+              href="https://www.linkedin.com/in/jacques-scoffoni/"
+              className="text-white text-decoration-none"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <div className="col-2">
+            <a
+              href="https://github.com/jako0320"
+              className="text-white text-decoration-none"
+            >
+              GitHub
+            </a>
+          </div>
+          <div className="col-2">
+            <a
+              href="mailto:jacques.scoffoni@gmail.com"
+              className="text-white text-decoration-none"
+            >
+              Email me
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
+
+export default Footer;

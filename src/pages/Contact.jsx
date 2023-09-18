@@ -51,41 +51,75 @@ function Contact() {
     <section>
       <h1>Contact</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {formErrors.name && <div className="error">{formErrors.name}</div>}
+        <div className="row mb-3">
+          <div className="col-md-1">
+            <label htmlFor="name" className="form-label font-weight-bold">
+              Name
+            </label>
+          </div>
+          <div className="col-md-10">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className={`form-control ${formErrors.name ? "is-invalid" : ""}`}
+            />
+            {formErrors.name && (
+              <div className="invalid-feedback">{formErrors.name}</div>
+            )}
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {formErrors.email && <div className="error">{formErrors.email}</div>}
+        <div className="row mb-3">
+          <div className="col-md-1">
+            <label htmlFor="email" className="form-label font-weight-bold">
+              Email
+            </label>
+          </div>
+          <div className="col-md-10">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={`form-control ${formErrors.email ? "is-invalid" : ""}`}
+            />
+            {formErrors.email && (
+              <div className="invalid-feedback">{formErrors.email}</div>
+            )}
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-          {formErrors.message && (
-            <div className="error">{formErrors.message}</div>
-          )}
+        <div className="row mb-3">
+          <div className="col-md-1">
+            <label htmlFor="message" className="form-label font-weight-bold">
+              Message
+            </label>
+          </div>
+          <div className="col-md-10">
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className={`form-control ${
+                formErrors.message ? "is-invalid" : ""
+              }`}
+              rows="6"
+            />
+            {formErrors.message && (
+              <div className="invalid-feedback">{formErrors.message}</div>
+            )}
+          </div>
         </div>
-        <button type="submit">Submit</button>
+        <div className="row mb-3">
+          <div className="col-md-8 offset-md-1">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
+        </div>
       </form>
     </section>
   );
